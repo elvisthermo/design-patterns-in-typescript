@@ -1,10 +1,10 @@
-interface TelaFaxtory{
+interface TelaFactory{
     createButton():Button;
     createCheckBox():Checkbox;
 }
 
 
-class Windows implements TelaFaxtory{
+class Windows implements TelaFactory{
     createButton():Button {
         return new WindowsButton();
     }
@@ -14,7 +14,7 @@ class Windows implements TelaFaxtory{
     }
 }
 
-class Linux implements TelaFaxtory{
+class Linux implements TelaFactory{
     createButton():Button {
         return new LinuxButton();
     }
@@ -62,7 +62,7 @@ class WindowsCheckbox implements Checkbox{
 class Application{
     private button!: Button;
     
-    constructor(private tela:TelaFaxtory){
+    constructor(private tela:TelaFactory){
         this.criarTela()
         
     }

@@ -1,0 +1,1 @@
+### Padrão de projeto criacional para criação de familia de objetos relacionados sem a criação de uma classe concreta
